@@ -1,30 +1,26 @@
 # shadcn-demo
+Minimal [shadcn](https://ui.shadcn.com/) starter/demo with buttons and a dark mode toggle.
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+- Uses react v19, tailwind v4, and pnpm.
+- Started with [manual](https://ui.shadcn.com/docs/installation/manual) install, because shadcn does not play nice (see [#4746](https://github.com/shadcn-ui/ui/issues/4746)) when the root tsconfig uses references to other tsconfigs, as in `create vite...`.
+- Copied root tsconfig, and a few other things from [cloudflare/agents-starter](https://github.com/cloudflare/agents-starter).
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/jldecs-projects/v0-shadcn-demo)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/47Cx7yYwPlL)
+### Vercel
+Deployed to Vercel https://shadcn-demo-flame.vercel.app/
 
-## Overview
+Unless you configure [corepack](https://vercel.com/docs/builds/configure-a-build#corepack) Vercel usees the lockfile to detect the package manager. This is not enabled by default, and the packageManager key in package.json is not respected when there is no lockfile.
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+## TODO
 
-## Deployment
+#### UI
+- [ ] Fix the colors (red and black are not nice).
+- [ ] Use a proper menu component.
+- [ ] Replace darkmode dropdown with a simple toggle.
+- [ ] Show something when js is disabled.
 
-Your project is live at:
+#### Cloudflare todos
+- [ ] Add wrangler config and deploy to Cloudflare.
 
-**[https://vercel.com/jldecs-projects/v0-shadcn-demo](https://vercel.com/jldecs-projects/v0-shadcn-demo)**
-
-## Build your app
-
-Continue building your app on:
-
-**[https://v0.dev/chat/projects/47Cx7yYwPlL](https://v0.dev/chat/projects/47Cx7yYwPlL)**
-
-## How It Works
-
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+#### Test todos
+- [ ] add vitest and basic tests.
+- [ ] add a pattern for e2e tests.
